@@ -1,0 +1,28 @@
+
+
+node_modules/
+jspm_packages/
+
+.env
+.env.test
+.custom-env
+
+.vscode-test
+.vscode
+
+
+# SvelteKit specific
+.svelte-kit/
+.svelte/
+
+# IDE specific
+.vscode/
+.idea/
+
+# MacOS specific
+.DS_Store
+
+# Windows specific
+Thumbs.db
+
+
