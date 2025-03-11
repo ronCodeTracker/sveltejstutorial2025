@@ -47,7 +47,9 @@ import sound from './sound.mp3';
 	<a href="/events">main</a>
 	<a href="#music">music</a>
     <a href="/binding">binding</a>
+	
 </nav>
+
 
 
 
@@ -75,11 +77,17 @@ import sound from './sound.mp3';
 
 
 
-
 <a href="./" class="homeLink">Home</a>
 
  
 </div>
+
+
+
+<!-- title    -->
+<h1 class="titleEvents">Events</h1>
+
+
 
 
 
@@ -103,6 +111,13 @@ decrement={() => value -= 1}
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 <style>
+
+      .titleEvents {
+		   text-align: center;
+	       margin-top: 2em;
+		   margin-bottom: -4em;
+	  }
+
 	
 	.fixedStyle {
 			position: fixed;

@@ -1,5 +1,17 @@
 
 
+<script>
+    
+     let name = $state('world');
+
+
+
+
+</script>
+
+
+
+
 <style>
     body {
         font-family: 'Arial', sans-serif;
@@ -30,12 +42,16 @@
 
 
     .container {
-        background-color: #ffffff;
+        background-color: #efe7df;
         padding: 30px;
+        padding-top: 5px;
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         max-width: 800px;
         margin: 20px auto;
+        margin-left: 15%;
+        margin-right: 15%;
+        margin-top: 2em;
         text-align: center;
     }
 
@@ -47,17 +63,7 @@ h1 {
         margin-bottom: 20px;
         position: relative;
     }
-    h1::after {
-        content: '';
-        width: 50px;
-        height: 4px;
-        background-color: #ff6347; /* Tomato color */
-        position: absolute;
-        bottom: -10px;
-        left: 50%;
-        transform: translateX(-50%);
-        border-radius: 2px;
-    }
+    
 
         p {
         font-size: 18px;
@@ -65,6 +71,36 @@ h1 {
         line-height: 1.6;
         margin: 0;
     }
+
+    .widthStyle {
+		width: 70%;
+		margin: 0 auto;
+	
+    }
+
+
+.textboxInputStyle {
+		width: 20%;
+		padding: 10px;
+		margin: 10px 30px;
+        margin-top: 30px;
+		border: 1px solid #ccc;
+		border-radius: 4px;
+		font-size: 16px;
+		box-sizing: border-box;
+	}
+
+    .outputStyle {
+		font-size: 20px;
+		color: #333333;
+		margin: 2px 20%;
+        margin-bottom: 3em;
+        margin-top: 2em;
+	}
+
+
+
+
 </style>
 
 
@@ -79,6 +115,15 @@ h1 {
 
 
 <div class="container">
-    <h1>Interesting Title</h1>
-    <p>This is a single paragraph with an interesting style. The title has a decorative underline, and the paragraph text is styled for readability.</p>
+    <h1>Bindings</h1>
+    <p class="widthStyle">We will first study and use the textbox binding (Text inputs bindings)
+with the bind:value= &#123;name&#125; format.</p>
 </div>
+
+
+        <input bind:value={name} class="textboxInputStyle" />
+        <h1 class="outputStyle">Hello {name}!</h1>
+
+        <hr>
+
+        <br><br><br><br><br><br>
