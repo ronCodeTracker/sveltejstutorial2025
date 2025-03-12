@@ -4,7 +4,8 @@
     
      let name = $state('world');
 
-
+     let a = $state(1);
+	 let b = $state(2);
 
 
 </script>
@@ -98,8 +99,14 @@ h1 {
         margin-top: 2em;
 	}
 
+    .inputBox {
+
+    }
 
 
+    .inputSlider {
+
+    }
 
 </style>
 
@@ -126,4 +133,20 @@ with the bind:value= &#123;name&#125; format.</p>
 
         <hr>
 
-        <br><br><br><br><br><br>
+        <br><br><br>
+        
+        <label>
+	        <input type="number" bind:value={a} min="0" max="10" class="inputBox" />
+	        <input type="range" bind:value={a} min="0" max="10" class="inputSlider" />
+        </label>
+
+        <label>
+	        <input type="number" bind:value={b} min="0" max="10" />
+	        <input type="range" bind:value={b} min="0" max="10" />
+        </label>
+
+  <p>{a} + {b} = {a + b}</p>
+
+        
+        
+        <br><br><br>
