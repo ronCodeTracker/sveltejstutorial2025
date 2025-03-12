@@ -1,6 +1,16 @@
 import adapter from '@sveltejs/adapter-auto';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
+import adapter from '@sveltejs/adapter-netlify';
 
+
+
+export default {
+  kit: {
+    // hydrate the <div id="svelte"> element in src/app.html
+    target: '#svelte',
+    adapter: adapter()
+  }
+};
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	// Consult https://svelte.dev/docs/kit/integrations
