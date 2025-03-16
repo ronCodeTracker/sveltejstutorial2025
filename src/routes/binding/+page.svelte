@@ -4,8 +4,8 @@
     
      let name = $state('world');
 
-     let a = $state(1);
-	 let b = $state(2);
+     let a = $state(3);
+	 let b = $state(3);
 
 
 </script>
@@ -99,14 +99,109 @@ h1 {
         margin-top: 2em;
 	}
 
-    .inputBox {
+    .label-container {
+		display: flex;
+		gap: 10em; /* Space between the input items */
+        padding: 20px;
+        margin-bottom: 2em;
+	}
+
+
+    .input-container {
+        display: inline;
+        margin-right: 50px;
+       
 
     }
 
+    .input-container-2 {
+		display: inline;
+		
+	}
 
-    .inputSlider {
 
+    .textbox-1 {
+        margin-bottom: 20%;
     }
+
+
+    
+    .textboxlabel-2 {
+
+        margin-right: 50px;
+        margin-bottom: 20%;
+    }
+
+
+    .paragraphOutput {
+        margin-left: 20%;
+    }
+
+
+    input[type="range"] {
+    -webkit-appearance: none;
+    width: 50%;
+    height: 6px;
+    background: #ddd;
+    border-radius: 5px;
+    outline: none;
+    transition: background 0.3s;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: #04724D; /*  green color */
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(50, 205, 50, 0.5);
+    transition: background 0.3s, transform 0.3s;
+    position: relative;
+    top: -4.5px; /* Adjust thumb position */
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    background: #32CD32; /* Lime green color */
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(50, 205, 50, 0.5);
+    transition: background 0.3s, transform 0.3s;
+    position: relative;
+    top: -4.5px; /* Adjust thumb position */
+}
+
+
+input[type="range"]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 6px;
+    cursor: pointer;
+    background: linear-gradient(to right, #006400, #00FF7F); /* Green gradient */
+    border-radius: 5px;
+}
+
+
+input[type="range"]::-moz-range-track {
+    width: 100%;
+    height: 6px;
+    cursor: pointer;
+    background: linear-gradient(to right, #006400, #00FF7F); /* Green gradient */
+    border-radius: 5px;
+}
+
+
+input[type="range"]:hover::-webkit-slider-thumb {
+    background: #00FF7F; /* Light green color */
+    transform: scale(1.2);
+}
+
+input[type="range"]:hover::-moz-range-thumb {
+    background: #00FF7F; /* Light green color */
+    transform: scale(1.2);
+}
 
 </style>
 
@@ -135,17 +230,26 @@ with the bind:value= &#123;name&#125; format.</p>
 
         <br><br><br>
         
+
+        <div class="label-container">
+
         <label>
-	        <input type="number" bind:value={a} min="0" max="10" class="inputBox" />
-	        <input type="range" bind:value={a} min="0" max="10" class="inputSlider" />
+            <div class="input-container">
+	        <input type="number" bind:value={a} min="0" max="10" class="textbox-1" />
+	        </div>
+            <div class="input-container-2">
+            <input type="range" bind:value={a} min="0" max="10" />
+            </div>      
         </label>
 
         <label>
-	        <input type="number" bind:value={b} min="0" max="10" />
+	        <input type="number" bind:value={b} min="0" max="10" class="textboxlabel-2" />
 	        <input type="range" bind:value={b} min="0" max="10" />
         </label>
 
-  <p>{a} + {b} = {a + b}</p>
+        </div>
+
+  <p class="paragraphOutput">{a} + {b} = {a + b}</p>
 
         
         
