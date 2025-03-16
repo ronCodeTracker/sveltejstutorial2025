@@ -10,6 +10,35 @@
      //check box binding
      let yes = $state(false);
 
+     let questions = $state([
+		{
+			id: 1,
+			text: `Where did you go to school?`
+		},
+		{
+			id: 2,
+			text: `What is your mother's name?`
+		},
+		{
+			id: 3,
+			text: `What is another personal fact that an attacker could easily find with Google?`
+		}
+	]);
+
+    let selected = $state();
+
+	let answer = $state('');
+
+	function handleSubmit(e) {
+		e.preventDefault();
+
+		alert(
+			`answered question ${selected.id} (${selected.text}) with "${answer}"`
+		);
+	}
+
+
+
 </script>
 
 
@@ -224,6 +253,39 @@ input[type="range"]:hover::-moz-range-thumb {
     margin-left: 10%;
 }
 
+
+.format-title-bindingSelect {
+	margin-left: 15%;
+	color: orange;
+    color: #E58F65;
+}
+
+
+.format-title-bindingSelect2 {
+    margin-left: 1em;
+    display: block;
+}
+
+.format-answer-bindingSelect {
+	margin-left: 1em;
+	margin-top: 1em;
+	margin-bottom: 1em;
+    margin-right: 1em;
+	display: inline;
+}
+
+.format-text-binding {
+	margin-left: 15%;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	margin-right: 1em;
+	
+    color: #E58F65;
+    
+    
+}
+
+
 </style>
 
 
@@ -306,3 +368,45 @@ with the bind:value= &#123;name&#125; format.</p>
 
 </div>
 </div>
+
+
+        <br><br><br>
+
+<h2 class="format-title-bindingSelect">Insecurity questions</h2>
+
+
+<form onsubmit={handleSubmit}>
+	<select
+		bind:value={selected}
+		onchange={() => (answer = '')}
+        class="format-title-bindingSelect2"
+	>
+		{#each questions as question}
+			<option value={question}>
+				{question.text}
+			</option>
+		{/each}
+	</select>
+
+
+<input bind:value={answer} class="format-answer-bindingSelect" />
+
+
+<button disabled={!answer} type="submit">
+		Submit
+	</button>
+</form>
+
+
+
+<p class="format-text-binding">
+	selected question {selected
+		? selected.id
+		: '[waiting...]'}
+</p>
+
+
+
+<br><br><br><br><br><br>
+
+
