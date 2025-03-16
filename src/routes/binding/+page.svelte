@@ -7,6 +7,8 @@
      let a = $state(3);
 	 let b = $state(3);
 
+     //check box binding
+     let yes = $state(false);
 
 </script>
 
@@ -203,6 +205,25 @@ input[type="range"]:hover::-moz-range-thumb {
     transform: scale(1.2);
 }
 
+
+.containerForCard {
+    background-color: #ADD9F4;
+    margin-bottom: 5em;
+    padding-bottom: 5em;
+    padding-top: 5em;
+}
+
+
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 300px;
+    text-align: center;
+    margin-left: 10%;
+}
+
 </style>
 
 
@@ -254,3 +275,34 @@ with the bind:value= &#123;name&#125; format.</p>
         
         
         <br><br><br>
+<div class="containerForCard">
+<div class="card">
+<label>
+	<input type="checkbox" bind:checked={yes} />
+	Yes! Send me regular email spam
+</label>
+
+<br><br><br>
+
+
+
+
+{#if yes}
+	<p>
+		Thank you. We will bombard your inbox and sell
+		your personal details.
+	</p>
+{:else}
+	<p>
+		You must opt in to continue. If you're not
+		paying, you're the product.
+	</p>
+{/if}
+
+<br><br><br>
+
+
+<button disabled={!yes}>Subscribe</button>
+
+</div>
+</div>
