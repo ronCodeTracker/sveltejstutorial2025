@@ -2,6 +2,9 @@
 
 <script>
     
+     import Groups from './Groups.svelte';
+      
+
      let name = $state('world');
 
      let a = $state(3);
@@ -21,7 +24,7 @@
 		},
 		{
 			id: 3,
-			text: `What is another personal fact that an attacker could easily find with Google?`
+			text: `What is another personal fact \nthat an attacker could easily find\n with Google?`
 		}
 	]);
 
@@ -264,6 +267,7 @@ input[type="range"]:hover::-moz-range-thumb {
 .format-title-bindingSelect2 {
     margin-left: 1em;
     display: block;
+    width: 70%;
 }
 
 .format-answer-bindingSelect {
@@ -286,12 +290,25 @@ input[type="range"]:hover::-moz-range-thumb {
 }
 
 
+@media (max-width: 600px) {
+    .format-title-bindingSelect2 {
+        width: 100%;
+    }
+
+    nav {
+        justify-content: space-evenly;
+    }
+}
+
+
+
+
 </style>
 
 
  
 
-<nav>
+<nav class="mobile">
 	<a href="/events">main</a>
 	<a href="/events/#music">music</a>
     <a href="/binding">binding</a>
@@ -409,4 +426,13 @@ with the bind:value= &#123;name&#125; format.</p>
 
 <br><br><br><br><br><br>
 
+
+
+<Groups />
+
+
+
+
+
+<br><br><br><br><br><br>
 
