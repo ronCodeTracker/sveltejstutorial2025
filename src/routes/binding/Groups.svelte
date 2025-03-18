@@ -1,4 +1,4 @@
-
+ 
 <!-- 
 
     Name: Ronald Kiefer
@@ -29,7 +29,8 @@
 			class="radio"
 		/>
 
-		{number} {number === 1 ? 'scoop' : 'scoops'}
+		{number} {number === 1 ? 'scoop' : 'scoops'}yeah
+
 	</label>
 {/each}
 
