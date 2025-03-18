@@ -3,7 +3,7 @@
 <script>
     
      import Groups from './Groups.svelte';
-      
+     import TextArea from './TextArea.svelte';
 
      let name = $state('world');
 
@@ -437,3 +437,14 @@ with the bind:value= &#123;name&#125; format.</p>
 <br><br><br><br><br><br>
 
 <!--    have a blessed day and ahoe s repent   -->
+
+
+
+
+<TextArea />
+
+
+
+
+
+
