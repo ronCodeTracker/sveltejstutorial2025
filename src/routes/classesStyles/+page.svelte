@@ -2,6 +2,10 @@
 
 
 <script>
+
+    import StyleDirective from './styleDirective.svelte';	
+
+
 	let flipped = $state(false);
 	let symbol = $state('🐦‍🔥');
 
@@ -29,6 +33,9 @@
    <div>Class: Svelte 5</div>
 
 </div>
+
+
+
 <div class="container">
 	Flip the card
 	<button
@@ -45,6 +52,15 @@
 		
 	</button>
 </div>
+
+
+<br><br><br><br><br><br>
+
+
+<StyleDirective />
+
+<br><br><br><br><br><br>
+
 
 
 
