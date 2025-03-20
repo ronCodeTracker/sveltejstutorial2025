@@ -47,7 +47,8 @@ import sound from './sound.mp3';
 	<a href="/events">main</a>
 	<a href="#music">music</a>
     <a href="/binding">binding</a>
-	
+	<a href="/classesStyles">classesStyles</a>
+
 </nav>
 
 

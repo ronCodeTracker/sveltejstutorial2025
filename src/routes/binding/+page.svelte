@@ -312,6 +312,7 @@ input[type="range"]:hover::-moz-range-thumb {
 	<a href="/events">main</a>
 	<a href="/events/#music">music</a>
     <a href="/binding">binding</a>
+    <a href="/classesStyles">classes-styles</a>
 </nav>
 
 

@@ -29,7 +29,7 @@
 			class="radio"
 		/>
 
-		{number} {number === 1 ? 'scoop' : 'scoops'}yeah
+		{number} {number === 1 ? 'scoop' : 'scoops'}
 
 	</label>
 {/each}
