@@ -5,7 +5,7 @@
 
 Name:  Ronald Kiefer
 Date:  February 26, 2025  Wednesday
-Course:  Svelte 5 Youtube.com@Syntax
+
 
 
 -->
@@ -21,6 +21,9 @@ Course:  Svelte 5 Youtube.com@Syntax
 
     import Nav from './NavG.svelte';
 
+
+
+    
 
 	let formState = $state({
 		name: '',

@@ -95,7 +95,9 @@ import sound2 from './sound2.mp3';
  
 </div>
 
-
+<div class="card2">
+	<a href="./extracomponents" class="homeLink">Extra</a>
+</div>
 
 <!-- title    -->
 <h1 class="titleEvents">Events</h1>
@@ -190,9 +192,25 @@ decrement={() => value -= 1}
             max-width: 300px;
 			max-height: 100px;
             text-align: center;
+			display: inline;
 			
         }
        
+		.card2 {
+            background-color: #36454F; /* Light cyan color */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 300px;
+			max-height: 100px;
+            text-align: center;
+			display: inline;
+			
+			
+        }
+
+
+
 	a {
 	
 		text-decoration: none;
