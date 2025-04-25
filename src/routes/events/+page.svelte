@@ -8,8 +8,9 @@
 import Nav from './NavTwo.svelte';
 import Stepper from './Stepper.svelte';
 import BigButton from './BigButton.svelte';
+import BigButton2 from './BigButton2.svelte';
 import sound from './sound.mp3';
-
+import sound2 from './sound2.mp3';
 
 
 	let m = $state({ x: 0, y: 0 });
@@ -32,6 +33,17 @@ import sound from './sound.mp3';
 	}
 
 	
+
+	const audio2 = new Audio();
+	audio2.src = sound2;
+
+
+	function hitit2() {
+		audio2.load();
+		audio2.play();
+	}
+
+
 
 
 
@@ -108,6 +120,12 @@ decrement={() => value -= 1}
 <div id="music" class="styleComponentBtn">
 <BigButton onclick={hitit} /> 
 </div>
+
+
+<div id="music" class="styleComponentBtn">
+	<BigButton2 onclick={hitit2} /> 
+	</div>
+
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
